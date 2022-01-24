@@ -1,0 +1,225 @@
+<!DOCTYPE html [
+        <!ENTITY nbsp "&#160;">
+]>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        
+    }
+    td {
+        font-family: 'Times New Roman Cyr', sans-serif;
+        font-size: 14.5px;
+        vertical-align: top;
+        border: 1px solid #000000;
+        padding: 2px 7px;
+    }
+    hr{
+      background: #000000;
+      width: 100%;
+      color: #000000;
+      height: 1px;
+      border-top: 1px solid #000000;
+    }
+
+    .title-container {
+        font-family: 'Times New Roman Cyr', sans-serif;
+        font-size: 14.5px;
+        text-align: center;
+        color: black;
+    }
+
+    .text-justify {
+        font-family: 'Times New Roman Cyr', sans-serif;
+        font-size: 14.5px;
+        text-align: justify;
+        color: black;
+        font-weight: normal;
+    }
+    .text-indent{
+        font-family: Times New Roman Cyr, sans-serif;
+        font-size: 14.5px;
+        text-align: justify;
+        text-indent: 30px;
+        font-weight: normal;
+    }
+
+    @page Section1 {
+        margin-left: 2cm;
+        margin-top: 1.5cm;
+        margin-right: 1.25cm;
+        margin-bottom: 1.5cm;
+        mso-header: h1;
+        mso-footer: f1;
+    }
+    div.Section1 {page: Section1;}        
+     @page {
+            size: 21cm 29.7cm;
+            counter-reset: page 2;           
+            @top-center {
+                content: element(header)
+            }
+            @bottom-center {
+                content: element(footer)
+            }
+        }
+
+        #header {
+            position: running(header);
+
+        }
+
+        #pagenumber:before {
+            content: counter(page);
+        }
+
+        #pagecount:before {
+            content: counter(pages);
+        }
+
+
+    table#hrdftrtbl
+        {
+            margin:0in 0in 0in 900in;
+            width:1px;
+            height:1px;
+            overflow:hidden;
+        }
+
+        p.MsoFooter, li.MsoFooter, div.MsoFooter
+        {
+            margin:0in;
+            margin-bottom:0pt;
+            mso-pagination:widow-orphan;
+            tab-stops: left 1.0in;
+            font-size:11.0pt;
+        }
+
+    </style>
+</head>
+<body>
+<#setting date_format="«dd» MMMM yyyy"/>
+<#setting locale="ru" />
+<body>
+    
+<body>
+
+  <div class="Section1">
+    <img src="https://vbankcenter.ru/webstatic/logos/mkb_Logo20211206.jpg" alt="" width="170" height="30" style="margin-bottom: 20px;">
+    <div class="margin"><hr></div>
+    <h4 class="title-container"><i>Предложение Принципала заключить Договор о выдаче банковской гарантии </i><br /></h4>
+    <table style="text-align: center;">
+        <tbody>
+            <tr>
+              <td style="border-top:none;border-right:none;border-left:none"><#if bank.companyName?has_content>${bank.companyName} </#if></td>
+            </tr>
+            <tr>
+              <td style="border:none;">(наименование юридического лица)</td>
+            </tr>
+            <tr>
+              <td style="border-top:none;border-right:none;border-left:none"><#if bank.ogrnip?has_content>${bank.ogrnip}<#else>${bank.ogrn}</#if>, <#if bank.inn?has_content>${bank.inn}</#if></td>
+            </tr>
+            <tr>
+              <td style="border:none;">(<#if bank.ogrnip?has_content>ОГРНИП</#if><#if bank.ogrn?has_content>ОГРН</#if>, ИНН юридического лица)</td>
+            </tr>
+            <tr>
+              <td style="border-top:none;border-right:none;border-left:none"><#if bank.actualAddress?has_content>${bank.actualAddress}</#if></td>
+            </tr>
+            <tr>
+              <td style="border:none;">(адрес местонахождения юридического лица)</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="margin"><br /></div>
+    <div class="text-justify">далее именуемый «Принципал», </div>
+    <div class="text-justify">1) предлагает Банку ПАО "МОСКОВСКИЙ КРЕДИТНЫЙ БАНК" заключить Договор о выдаче банковской гарантии на условиях Правил предоставления банковских гарантий в рамках продукта «Экспресс - гарантия», опубликованных на сайте в сети Интернет по адресу <a href="https://mkb.ru/">https://mkb.ru/</a> (далее – Договор), и выражает согласие со всеми положениями Договора с даты подписания настоящего Предложения заключить Договор с помощью усиленной квалифицированной электронной подписи;</div>
+    <div class="text-justify">2) выражает согласие заключить Договор с Банком в качестве Стороны; </div>
+    <div class="text-justify">3) настоящим подтверждает, что ознакомлен со всеми положениями Договора, в том числе приложений к нему, и обязуется безусловно соблюдать их в случае принятия настоящего Предложения Банком; </div>
+    <div class="text-justify">4) соглашается с тем, что положения Договора определены Банком и изменения в Договор вносятся Банком в одностороннем порядке; </div>
+    <div class="text-justify">5) все условия обслуживания в рамках Договора, а также мои права и обязанности, возникающие в силу Договора, мне понятны и мной согласованы.</div>
+    <div class="text-justify">6) в случае согласия Банка заключить Договор просит Гаранта выдать Принципалу банковскую гарантию со следующими условиями:</div>
+    <table>
+      <tr>
+        <td align="center">Условие</td>
+        <td align="center">Содержание </td>
+      </tr>
+      <tr>
+        <td>Сумма и валюта Гарантии</td>
+        <td><#if bank.amount?has_content>${bank.amount?string[",##0.00;; groupingSeparator=' '"]}</#if> <#if bank.amountStr?has_content>(${bank.amountStr?cap_first})</#if></td>
+      </tr>
+      <tr>
+        <td>Дата выдачи Гарантии</td>
+        <td>В срок не позднее 5 (пяти) рабочих дней с момента получения настоящего Предложения о согласии заключить Договор и выполнения условий, предусмотренных в п. 6.1 Договора</td>
+      </tr>
+      <tr>
+        <td>Дата вступления в силу Гарантии</td>
+        <td>С момента выдачи Гарантии </td>
+      </tr>
+      <tr>
+        <td>Дата окончания срока действия Гарантии либо срок действия Гарантии (в годах и/или месяцах, и/или днях)</td>
+        <td><#if bank.dateTo?has_content>${bank.dateTo?date("yyyy-MM-dd")?date} г.</#if></td>
+      </tr>
+      <tr>
+        <td>Бенефициар</td>
+        <td><#if bank.purchase.customer?has_content>${bank.purchase.customer}</#if></td>
+      </tr>
+      <tr>
+        <td>Закон</td>
+        <td><#if bank.bgType=='FZ44'>44-ФЗ</#if>
+            <#if bank.bgType=='FZ223'>223-ФЗ</#if>
+            <#if bank.bgType=='FZ185_PP615'>185-ФЗ/615 ПП</#if></td>
+      </tr>
+      <tr>
+        <td>Основное обязательство</td>
+        <td><#if bank.subtype=='EXEC_CONTRACT'>Гарантия обеспечивает надлежащее исполнение обязательств Принципала перед Бенефициаром, возникающих из Контракта.</#if>
+            <#if bank.subtype=='REFUND'>Гарантия обеспечивает надлежащее исполнение обязательств Принципала перед Бенефициаром по возврату аванса, возникающих из Контракта.</#if>
+            <#if bank.subtype=='PARTICIPATION'>Гарантия выдается в качестве обеспечения заявок на участие в конкурсе/закрытом аукционе.</#if>
+            <#if bank.subtype=='EXEC_WARANTY'>Гарантия обеспечивает надлежащее исполнение обязательств Принципала перед Бенефициаром в гарантийный период, возникающих из Контракта.</#if>
+        </td>
+      </tr>
+      <tr>
+        <td>Комиссионное вознаграждение за выдачу гарантии</td>
+        <td><#if bank.commission?has_content>${bank.commission?string[",##0.00;; groupingSeparator=' '"]} российских рублей</#if> </td>
+      </tr>
+    </table>
+    <div class="text-justify">7) прикладывает проект Гарантии, необходимой к оформлению Банком в случае согласия Банка заключить Договор;</div>
+    <div class="text-justify">8) предлагает Банку рассматривать настоящее Предложение заключить договор после совершения нами оплаты комиссионного вознаграждения Банка за выдачу Гарантии в качестве неотъемлемой и составной части настоящего Предложения;</div>
+    <div class="text-justify">9) прикладывает письмо-гарантию о соблюдении норм действующего законодательства;</div>
+    <div class="text-justify">10) настоящим подтверждает, что лицо, осуществляющее подписание настоящего Заявления, является лицом, надлежащим образом уполномоченным на заключение от имени Принципала Договора, в том числе посредством направления Электронных документов, подписанных усиленной квалифицированной электронной подписью, получены и являются действительными все необходимые разрешения, одобрения, согласования, необходимые для заключения Договора, и исполнения обязательств по Договору.</div>
+    <table style="text-align:center;">
+        <tbody>
+            <tr>
+              <td style="border-top:none;border-right:none;border-left:none"><#if bank.ceoPosition?has_content>${bank.ceoPosition}, </#if><#if bank.fio?has_content>${bank.fio}</#if></td>
+            </tr>
+            <tr>
+              <td style="border:none;font-size: 12px;">должность, Ф. И. О. представителя юридического лица </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="text-justify" style="margin-top: 20px;">Подписано УКЭП</div>
+  <br clear=all style="mso-special-character:line-break;page-break-before:always"/>
+  </div>
+
+  <div class="Section1">
+    <img src="https://vbankcenter.ru/webstatic/logos/mkb_Logo20211206.jpg" alt="" width="170" height="30" style="margin-bottom: 20px;"/>
+    <div class="margin"><hr/></div>
+    <p class="title-container">ПИСЬМО-ГАРАНТИЯ О СОБЛЮДЕНИИ НОРМ ДЕЙСТВУЮЩЕГО ЗАКОНОДАТЕЛЬСТВА</p>
+    <div class="margin"><br /></div>
+    <div class="text-indent">Принципал в лице <#if bank.ceoPosition?has_content>${bank.ceoPosition}</#if> <#if bank.fio?has_content>${bank.fio}</#if> действующего(й) на основании <#if bank.ogrn?has_content>Устава<#else>Свидетельства</#if>, настоящим подтверждает, что, насколько ему известно: </div>
+    <div class="text-indent">– проект, в отношении которого предоставлена гарантия по Договору о выдаче банковской гарантии от <#if bank.dateFrom?has_content>${bank.dateFrom?date("yyyy-MM-dd")?date}</#if>г. <#if bank.bgNumberTemplate?has_content>№ ${bank.bgNumberTemplate}</#if>, разработан и внедрен, а также разработаны и установлены средства обслуживания проекта, использование которых осуществляется с учетом экологических факторов и с соблюдением всех требований законодательства, касающихся здравоохранения, охраны природы, охраны труда и участия общественности в обсуждении экологических проблем;  </div>
+    <div class="text-indent">– ни Принципал, ни его предпринимательская деятельность, ни его имущество не подлежат судебному или иному преследованию со стороны государственных органов власти или частных лиц в результате несоблюдения природоохранного законодательства, норм здравоохранения и охраны труда;</div>
+    <div class="text-indent">– деятельность Принципала в рамках проекта не относится к отраслям, включенным в Список отраслей, исключенных из системы финансирования Европейского банка реконструкции и развития (ЕБРР), а также финансируемых только после предварительного согласования с ЕБРР. Список таких отраслей размещен на веб-сайте ГАРАНТА по адресу <a href="http://mkb.ru/stoplist/"> http://mkb.ru/stoplist/</a>.</div>
+    <div class="text-justify">Настоящее Письмо-гарантия о соблюдении норм действующего законодательства сформировано в форме электронного документа, подписанного электронной подписью ПРИНЦИПАЛА, посредством использования онлайн-платформы с встроенной системой защищенного электронного документооборота </div>
+    <div class="text-justify" style="margin: 20px 0 ;">В случае подписания письма уполномоченным лицом, не указанным в ЕГРЮЛ, необходимо предоставить доверенность на подписанта.</div>
+    <div class="text-justify" >Подписано УКЭП</div>
+  </div>
+</body>
+
+</body>
+</body>
+
+</html>
