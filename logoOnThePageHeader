@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:m="http://schemas.microsoft.com/office/2004/12/omml"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+    v\:* {behavior:url(#default#VML);}
+    o\:* {behavior:url(#default#VML);}
+    w\:* {behavior:url(#default#VML);}
+
+    body {
+        font-family: Times New Roman, sans-serif;
+        line-height: 1.1;
+        font-size: 14.5px;
+    }
+
+    table {
+        font-family: Times New Roman, sans-serif;
+        font-size: 14.5px;
+        width: 100%;
+        border-collapse: collapse;
+        border:none;
+    }
+    td{
+        border: 1px solid #a5a5a5;
+        padding: 1px 5px;
+        font-family: Times New Roman, sans-serif;
+        font-size: 14.5px;
+        border:none;
+        vertical-align: top;
+        text-align: justify;
+    }
+
+    p{
+        margin: 0;
+        font-family: Times New Roman, sans-serif;
+        text-align: justify;
+    }
+    .text-indent{
+        text-indent: 25px
+    }
+    @page Section1 {
+        margin-left: 2.2cm;
+        margin-right: 1.4cm;
+        margin-bottom: 1cm;
+        margin-top: 1.8cm;
+        mso-header-margin:.3in;
+        mso-footer-margin:.2in;
+        mso-header: h1;
+        mso-footer: f1;
+    }
+    div.Section1 { page:Section1; }
+    table#hrdftrtbl{
+        margin:0in 0in 0in 900in;
+        width:1px;
+        height:0px;
+        overflow:hidden;
+    }
+    p.MsoFooter, li.MsoFooter, div.MsoFooter{
+        margin:0in;
+        margin-bottom:.0pt;
+        mso-pagination:widow-orphan;
+        tab-stops:center 3.0in right 6.0in;
+    }
+
+    @page {
+            size: 21cm 29.7cm;
+            margin-left: 2.2cm;
+            margin-right: 1.4cm;
+            margin-top: 1.8cm;
+            @top-center {
+                content: element(header)
+            }
+            @bottom-center {
+                content: element(footer)
+            }
+        }
+
+     
+    #header {
+        position: running(header);
+    }
+
+    #pagenumber:before {
+        content: counter(page);
+    }
+
+    #pagecount:before {
+        content: counter(pages);
+    }
+    </style>
+<xml>
+<w:WordDocument>
+<w:View>Print</w:View>
+<w:Zoom>100</w:Zoom>
+<w:DoNotOptimizeForBrowser/>
+</w:WordDocument>
+</xml>
+</head>
+<#setting date_format="«dd» MMMM yyyy" />
+<#setting locale="ru" />
+
+<body>
+
+
+
+<#if bank.subtype == 'PARTICIPATION'>
+        <#if bank.bgType?has_content>
+            <#if bank.bgType == 'FZ44'>
+<div class="Section1">
+    <table id='hrdftrtbl' border='0' cellspacing='0' cellpadding='0' style="text-align: right;">
+        <tr><td><div style='mso-element:header;text-align: left' id=h1 class=MsoHeader>
+                <img src="https://vbankcenter.ru/webstatic/logos/mts_bank.png" alt="" width="120" height="23" style="width:120px;height:23px;">
+            </div>
+            </td>
+        </tr>
+    </table>
+    <h4 class="title-container" style="text-align: center;margin:8px;font-size: 14.5px">НЕЗАВИСИМАЯ  ГАРАНТИЯ  № ${bank.bgNumberTemplate}</h4>
+    <br/>
+    <table width="100%" style="padding-top: 0px;">
+        <tbody>
+            <tr>
+                <td class="font" width="35%" style="padding-left: 0px;border: none">
+                    <div style="font-size: 14.5px;font-weight: bold;">город Москва</div>
+                </td>
+                <td style="border:none;" width="30%"></td>
+                <td class="font" style="text-align: right;padding-right: 0px;border: none" width="35%">
+                    <div style="font-size: 14.5px;font-weight: bold;">                                        
+                        <#if bank.dateTimeCreate?has_content>
+                            ${bank.dateTimeCreate?date("yyyy-MM-dd")?date} г.
+                        </#if>                                          
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div><br/></div>
+    <p class="text-indent">Публичное акционерное общество «МТС-Банк» или ПАО «МТС-Банк» (местонахождение: 115035, г. Москва, проспект Андропова, д. 18, корп.1, электронная почта: <a href="mailto:guarantee@mtsbank.ru">guarantee@mtsbank.ru</a>, корреспондентский счет № 30101810600000000232 в ГУ Банка России по Центральному федеральному округу, ОГРН 1027739053704, ИНН 7702045051, КПП 772501001, Генеральная лицензия Банка России на осуществление банковских операций от 17.12.2014г. № 2268), <#if bank.signer?has_content>${bank.signer}</#if>, именуемое в дальнейшем «Гарант», информирован о том, что <b><#if bank.companyName?has_content>${bank.companyName},</#if></b> <#if bank.legalAddress?has_content>${bank.legalAddress},</#if>  ИНН: <#if bank.inn?has_content>${bank.inn}</#if>, ОГРН: <#if bank.ogrn?has_content>${bank.ogrn} <#else> ${bank.ogrnip}</#if>, именуемое в дальнейшем «Принципал», намерен участвовать в <#if bank.purchase.placingName?has_content>${bank.purchase.placingName}</#if> (ИКЗ <#if bank.purchase.ikz?has_content>${bank.purchase.ikz}</#if>www.zakupki.gov.ru</a>)  на право заключения Контракта  на <#if bank.purchase.purchaseObjectInfo?has_content>${bank.purchase.purchaseObjectInfo}</#if> (далее – «Контракт»), проводимом <b><#if bank.purchase.customer?has_content>${bank.purchase.customer}</#if>,</b> <#if bank.purchase.customerPostAddress?has_content>${bank.purchase.customerPostAddress}</#if>, ИНН <#if bank.purchase.customerInn?has_content>${bank.purchase.customerInn}</#if>, ОГРН <#if bank.purchase.customerOgrn?has_content>${bank.purchase.customerOgrn}</#if>, КПП <#if bank.purchase.customerKpp?has_content>${bank.purchase.customerKpp}</#if>, именуемое в дальнейшем «Бенефициар». В соответствии с условиями Конкурсной документации Принципал обязан предоставить Бенефициару обеспечение Конкурсной заявки Принципала от <#if bank.purchase.publishDate?has_content>${bank.purchase.publishDate?date("yyyy-MM-dd")?date} </#if> на денежную сумму в размере <#if bank.amount?has_content>${bank.amount?string[",##0.00;; groupingSeparator=' '"]}</#if> (<#if bank.amountStr?has_content>${bank.amountStr?cap_first}</#if>) руб. в виде настоящей независимой гарантии (далее – «Гарантия»).</p>
+    <p class="text-indent">Учитывая вышеизложенное, по просьбе Принципала, Гарант настоящим принимает на себя безотзывное и безусловное обязательство выплатить по первому письменному требованию Бенефициара (далее – «Требование») любую сумму, не превышающую <#if bank.amount?has_content>${bank.amount?string[",##0.00;; groupingSeparator=' '"]}</#if> (<#if bank.amountStr?has_content>${bank.amountStr}</#if>) руб.,  в случае, если:</p>
+    <table style="margin-left: 20px;">
+        <tr>
+            <td width="2%">-</td>
+            <td> информация о Принципале включена в реестр недобросовестных поставщиков (подрядчиков, исполнителей) в соответствии со статьей 104 Федерального закона от 05.04.2013 г. № 44-ФЗ «О контрактной системе в сфере закупок товаров, работ, услуг для обеспечения государственных и муниципальных нужд» в связи с тем, что Принципал, будучи уведомленным о победе в Конкурсе, уклонился либо отказался подписать Контракт, право на заключение которого являлось предметом Конкурса.</td>
+        </tr>
+    </table>
+    <p class="text-indent">Требование по Гарантии должно быть представлено Гаранту с приложением указанных в настоящей Гарантии документов и с указанием:</p>
+    <table  style="margin-left: 20px;">
+        <tr>
+            <td width="2%">-</td>
+            <td> обстоятельств, наступление которых влечет выплату по Гарантии;</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td> банковских реквизитов Бенефициара для перевода платежей по настоящей Гарантии.</td>
+        </tr>
+    </table>
+    <p class="text-indent">Платеж по настоящей Гарантии в пользу Бенефициара будет произведен Гарантом после получения от Бенефициара Требования по гарантии и указанных в настоящей Гарантии документов, на банковский счет Бенефициара, указанный в Требовании по гарантии, в срок, указанный в настоящей Гарантии. Требование по Гарантии согласно части 15 статьи 44 Федерального закона от 05.04.2013 г. № 44-ФЗ «О контрактной системе в сфере закупок товаров, работ, услуг для обеспечения государственных и муниципальных нужд» предъявляется Бенефициаром в течение одного рабочего дня со дня включения информации о Принципале в реестр недобросовестных поставщиков (подрядчиков, исполнителей).</p>
+    <p class="text-indent">К Требованию должны быть приложен заверенный уполномоченным лицом Бенефициара и печатью Бенефициара документ, подтверждающий полномочия лица, подписавшего Требование по настоящей Гарантии (доверенность) (в случае, если Требование по настоящей Гарантии подписано лицом, не указанным в Едином государственном реестре юридических лиц в качестве лица, имеющего право без доверенности действовать о имени Бенефициара).</p>
+    <p class="text-indent">Бенефициар вправе в случае ненадлежащего выполнения или невыполнения Принципалом обязательств, обеспеченных Гарантией, представить на бумажном носителе или в форме электронного документа Требование по Гарантии, предоставленной в качестве обеспечения заявки, в размере обеспечения заявки, установленном в извещении об осуществлении закупки, документации о закупке.</p>
+    <p class="text-indent">Обязательство Гаранта перед Бенефициаром считается исполненным надлежащим образом с даты фактического поступления денежных сумм на счет, на котором в соответствии с законодательством Российской Федерации учитываются операции со средствами, поступающими Бенефициару, указанный Бенефициаром в требовании по Гарантии.</p>
+    <p class="text-indent">Гарант должен рассмотреть Требование по гарантии и приложенные к нему документы и, если Требование по гарантии признано им надлежащим, произвести платеж в течение 10 (Десяти) рабочих дней со дня, следующего за днем получения Требования по Гарантии со всеми приложенными к нему документами.</p>
+    <p class="text-indent">Все расходы, возникающие в связи с перечислением денежных средств Гарантом по настоящей Банковской гарантии, несет Гарант.</p>
+    <p class="text-indent">Предел обязательств Гаранта по настоящей Банковской гарантии ограничен суммой <#if bank.amount?has_content>${bank.amount?string[",##0.00;; groupingSeparator=' '"]}</#if> (<#if bank.amountStr?has_content>${bank.amountStr}</#if>) руб.</p>
+    <p class="text-indent">Требование и приложенные к нему документы должны быть составлены:</p>
+    <table  style="margin-left: 20px;">
+        <tr>
+            <td width="2%">-</td>
+            <td>  в письменной форме, на бумажном носителе, подписаны уполномоченным представителем Бенефициара, скреплены печатью Бенефициара и представлены Гаранту по адресу: 115432, г. Москва, проспект Андропова, д. 18, корп. 1,</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>  или в форме электронного документа, подписаны усиленной квалифицированной электронной подписью уполномоченным представителем Бенефициара и представлены на адрес электронной почты: <a href="mailto:guarantee@mtsbank.ru">guarantee@mtsbank.ru</a>,</td>
+        </tr>
+    </table>
+    <p class="text-indent">до истечения срока действия настоящей Гарантии.</p>
+    <p class="text-indent">Настоящая Гарантия является безотзывной, вступает в силу с даты ее выдачи и действует до <#if bank.dateTo?has_content>${bank.dateTo?date("yyyy-MM-dd")?date} г. </#if> включительно.</p>
+    <p class="text-indent">Настоящая Гарантия подчиняется и регулируется в соответствии с законодательством Российской Федерации.</p>
+    <p class="text-indent">В случае неисполнения надлежащим образом представленного Требования в установленный срок Гарант обязуется уплатить Бенефициару неустойку в размере 0,1 (ноль целых одна десятая) процента от указанной в Требовании суммы, подлежащей уплате, за каждый день просрочки, начиная с календарного дня, следующего за днем истечения установленного Гарантией срока оплаты Требования, по дату исполнения Гарантом Требования.</p>
+    <p class="text-indent">Гарант соглашается, что Бенефициар имеет право на бесспорное списание денежных средств со счета Гаранта при отсутствии оснований для отказа в удовлетворении требования Бенефициара, предусмотренных Гражданским кодексом Российской Федерации, если Гарантом в срок не более чем 10 (Десять) рабочих дней не исполнено требование Бенефициара об уплате денежной суммы по независимой гарантии, направленное до окончания срока ее действия.</p>
+    <p class="text-indent">Настоящая Гарантия выдана в пользу Бенефициара и права требования по ней могут быть переданы третьему лицу при перемене Бенефициара в случаях, предусмотренных законодательством Российской Федерации, с предварительным извещением об этом Гаранта.</p>
+    <p class="text-indent">Гарантия может быть изменена Гарантом в следующем порядке: </p>
+    <table  style="margin-left: 20px;">
+        <tr>
+            <td width="2%">-</td>
+            <td> изменения, связанные с увеличением суммы и (или) срока действия Гарантии, исправлением ошибок в части несоответствия условиям, указанным в извещении об осуществлении закупки или документации о закупке, или проекте Договора, а также иные изменения, не ухудшающие положение Бенефициара, вступают в силу в дату выпуска Гарантом изменений в Гарантию; </td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td> иные изменения в Гарантию вступают в силу в дату получения Гарантом согласия Бенефициара на соответствующее изменение Гарантии.</td>
+        </tr>
+    </table>
+    <p class="text-indent">Любые изменения настоящей Гарантии, как требующие согласие Бенефициара, так и не требующие его согласия, производятся Гарантом в письменной форме и направляются Бенефициару в срок не позднее 5 (Пяти) рабочих дней с момента их внесения.</p>
+    <p class="text-indent">Гарант передает сведения о Принципале, определенные ст. 4 Федерального закона от 30.12.2004 г. № 218-ФЗ «О кредитных историях», хотя бы в одно бюро кредитный историй, включенное в государственный реестр бюро кредитных историй, без получения согласий Принципала на их представление, в соответствии с требованиями ч. 3.1 и ч. 4 ст. 5 указанного Закона.</p>
+    <p class="text-indent">Настоящая Гарантия подчиняется законодательству Российской Федерации. Все споры, возникающие в связи с действительностью, толкованием или исполнением настоящей Банковской гарантии, подлежат рассмотрению в Арбитражном суде в соответствии с действующим законодательством Российской Федерации.</p>
+    <p class="text-indent">Гарант отказывает в удовлетворении требования Бенефициара, если Требование по Гарантии или приложенные к нему документы не соответствуют условиям Гарантии либо представлены Гаранту (получены Гарантом) по окончании срока действия настоящей Гарантии.</p>
+    <div style="margin-top:8px"><br/></div>
+    <table style="margin-top:12px;width: 100%;">
+        <tbody>
+            <tr>
+                <td colspan="7" style="border: none">ГАРАНТ:</td>
+            </tr>
+            <tr>
+                <td style="width: 50%;border:none;vertical-align: bottom;"><#if bank.position?has_content>${bank.position}</#if></td>
+                <td style="border:none;width:2%;">&#160;</td>
+                <td style="border:none;color: #000000;width: 0.5%;vertical-align: bottom;"> /</td>
+                <td style="border-bottom: 1px solid #000;width: 10%;text-align: center;">&#160;</td>
+                <td style="border:none;color: #000000;width: 0.5%;vertical-align: bottom;"> /</td>
+                <td style="border:none;width:2%;">&#160;</td>
+                <td style="border-bottom: 1px solid #000;width: 35%;vertical-align: bottom;text-align: center;"><#if bank.signerFio?has_content>${bank.signerFio}</#if></td>
+            </tr>
+            <tr>
+                <td style="border:none;text-align: center;vertical-align: bottom;"></td>
+                <td style="border:none;">&#160;</td>
+                <td style="border:none;color: #a5a5a5;vertical-align: bottom;"> &#160;</td>
+                <td style="border-top: 1px solid #000;text-align: center;vertical-align: top;"><i>(подпись)</i> </td>
+                <td style="border:none;color: #a5a5a5;vertical-align: bottom;"> &#160;</td>
+                <td style="border:none;">&#160;</td>
+                <td style="border:none;vertical-align: bottom;text-align: center;"><i>Ф.И.О.</i></td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: none"><br/>М.П.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</#if></#if></#if>
+
+<#if bank.subtype == 'PARTICIPATION'>
+        <#if bank.bgType?has_content>
+            <#if bank.bgType == 'FZ223'>
+<div class="Section1">
+    <table id='hrdftrtbl' border='0' cellspacing='0' cellpadding='0' style="text-align: right;">
+        <tr><td><div style='mso-element:header;text-align: left' id=h1 class=MsoHeader>
+                <img src="https://vbankcenter.ru/webstatic/logos/mts_bank.png" alt="" width="120" height="23" style="width:120px;height:23px;">
+            </div>
+            </td>
+        </tr>
+    </table>
+    <h4 class="title-container" style="text-align: center;margin:8px;font-size: 14.5px">БАНКОВСКАЯ ГАРАНТИЯ  № ${bank.bgNumberTemplate}</h4>
+    <br/>
+    <table width="100%" style="padding-top: 0px;">
+        <tbody>
+            <tr>
+                <td class="font" width="35%" style="padding-left: 0px;border: none">
+                    <div style="font-size: 14.5px;">г. Москва</div>
+                </td>
+                <td style="border:none;" width="30%"></td>
+                <td class="font" style="text-align: right;padding-right: 0px;border: none" width="35%">
+                    <div style="font-size: 14.5px;">                                        
+                        <#if bank.dateTimeCreate?has_content>
+                            ${bank.dateTimeCreate?date("yyyy-MM-dd")?date} г.
+                        </#if>                                          
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div><br/><br/></div>
+    <p class="text-indent"><b>1. Публичное акционерное общество «МТС-Банк»</b> (ПАО «МТС-Банк») (местонахождение: 115035, г. Москва, проспект Андропова, д. 18, корп. 1, корреспондентский счет № 30101810600000000232 в ГУ Банка России по Центральному федеральному округу, ОГРН 1027739053704, БИК 044525232, ИНН 7702045051, КПП 772501001, Генеральная лицензия Банка России на осуществление банковских операций от <#if bank.partnerMainInfoFmo.licenseDate?has_content>${bank.partnerMainInfoFmo.licenseDate?date("yyyy-MM-dd")?date} г.,</#if> № 2268), именуемое в дальнейшем «Гарант», <#if bank.signer?has_content>${bank.signer},</#if> принимая во внимание   обязательства <b><#if bank.companyName?has_content>${bank.companyName}</#if> <#if bank.clientShortName?has_content>${bank.clientShortName}</#if></b> (ОГРН <#if bank.ogrn?has_content>${bank.ogrn}</#if>, ИНН <#if bank.inn?has_content>${bank.inn}</#if>, местонахождение/почтовый адрес: <#if bank.legalAddress?has_content>${bank.legalAddress}</#if>), именуемое в дальнейшем «Принципал», перед <b><#if bank.purchase.customer?has_content>${bank.purchase.customer}</#if> <#if bank.purchase.customerShortName?has_content>${bank.purchase.customerShortName}</#if></b> (ОГРН <#if bank.purchase.customerOgrn?has_content>${bank.purchase.customerOgrn}</#if>, ИНН <#if bank.purchase.customerInn?has_content>${bank.purchase.customerInn}</#if>, местонахождение/почтовый адрес: <#if bank.purchase.customerActualAddress?has_content>${bank.purchase.customerActualAddress}</#if>), далее именуемому «Бенефициар», связанные с участием Принципала в аукционе/конкурсе в электронной форме № <#if bank.purchase.purchaseNumber?has_content>${bank.purchase.purchaseNumber},</#if> <#if bank.purchase.lotNumber?has_content>номер лота ${bank.purchase.lotNumber},</#if> (далее – «Конкурс», и/или «Конкурсная документация») выдало в пользу Бенефициара настоящую Гарантию на следующих условиях (далее – «Гарантия»).</p>
+    <p class="text-indent">2. Гарант настоящим обязуется уплатить Бенефициару по его первому письменному требованию  (далее – «Требование») денежную сумму, не превышающую <#if bank.amount?has_content>${bank.amount?string[",##0.00;; groupingSeparator=' '"]}</#if> (<#if bank.amountStr?has_content>${bank.amountStr}</#if>) руб.  (далее – «Сумма Гарантии»), в случае неисполнения и/или ненадлежащего исполнения Принципалом своих обязательств, предусмотренных Конкурсной документацией, при признании его Победителем.</p>
+    <p class="text-indent"> Под обязательствами Принципала в целях исполнения настоящей Гарантии подразумеваются:  </p>
+    <p class="text-indent">- изменение или отзыв Принципалом Конкурсной заявки в течение срока ее действия после истечения срока окончания приема Конкурсных заявок;</p>
+    <p class="text-indent">- предоставление Принципалом заведомо ложных сведений или намеренного искажения информации или документов, приведенных в составе Конкурсной заявки;</p>
+    <p class="text-indent">- отказ Принципала, признанного Победителем конкурса, подписать Протокол о результатах конкурса в порядке, предусмотренном Конкурсной документацией; </p>
+    <p class="text-indent">- отказ Принципала, признанного Победителем конкурса, заключить Договор в порядке, установленном Конкурсной документацией.</p>
+    <p class="text-indent"> 3. Гарант по получении от Бенефициара письменного Требования о выплате денежной суммы по настоящей Гарантии и приложенных к нему документов, обязуется в течение 5 (Пяти) рабочих дней со дня, следующего за днем получения Требования от Бенефициара рассмотреть указанное Требование.</p>
+    <p class="text-indent"> По истечении указанного срока Гарант:</p>
+    <p class="text-indent"> - производит платеж в случае, если Требование будет признано Гарантом надлежащим;</p>
+    <p class="text-indent">- отказывает в удовлетворении Требования Бенефициара в случаях, если Требование или приложенные к Требованию документы не соответствуют условиям Гарантии либо будут получены Гарантом по окончании срока действия настоящей Гарантии;</p>
+    <p class="text-indent">- приостанавливает платеж на срок до 7 (Семи) дней при наличии оснований, предусмотренных ст. 376 ГК РФ.</p>
+    <p class="text-indent">4. Требование должно быть составлено в письменной форме на бумажном носителе, подписано уполномоченным представителем Бенефициара, скреплено печатью Бенефициара и получено Гарантом по адресу: 115035, г. Москва, проспект Андропова, д. 18, корп. 1, до истечения срока действия настоящей Гарантии. </p>
+    <p class="text-indent">5. В Требовании Бенефициар должен указать в чем состоит нарушение Принципалом обязательств по Конкурсной документации (со ссылками на конкретный пункт, обязательства по которому нарушены), с указанием документов, подтверждающих нарушение Принципалом обязательств по Конкурсной документации и реквизиты банковского счета Бенефициара, на которых Гарантом должны быть произведены платежи по настоящей гарантии.</p>
+    <p class="text-indent">6. К указанному Требованию должны быть приложены следующие документы:  </p>
+    <p class="text-indent">- Конкурсная документация (со всеми изменениями и дополнениями, приложениями, протоколами разногласий, которые будут существовать на момент направления Требования Гаранту);</p>
+    <p class="text-indent">- расчет суммы, включаемой в Требования по гарантии;</p>
+    <p class="text-indent">- документы, подтверждающие полномочия лица, подписавшего требование об уплате денежной суммы по настоящей Гарантии.</p>
+    <p class="text-indent">Документы, прилагаемые к требованию по Гарантии, должны быть представлены в виде оригиналов, либо копий, подписанные либо заверенные руководителем Бенефициара или уполномоченным представителем Бенефициара, скреплены печатью Бенефициара в соответствии с требованиями действующего законодательства Российской Федерации.</p>
+    <p class="text-indent">7. Предусмотренное настоящей Гарантией обязательство Гаранта перед Бенефициаром ограничивается уплатой Суммы Гарантии. Ответственность Гаранта перед Бенефициаром за невыполнение или ненадлежащее выполнение Гарантом обязательств по настоящей Гарантии ограничивается Суммой Гарантии. </p>
+    <p class="text-indent">8. Платежи по настоящей Гарантии будут производиться Гарантом на банковский счет Бенефициара, указанный в Требовании. Моментом исполнения обязательств Гаранта является дата списания денежных средств с корреспондентского счета Гаранта.</p>
+    <p class="text-indent">9. Передача права требования по настоящей Гарантии не допускается.</p>
+    <p class="text-indent">10. Гарант вправе предъявлять Бенефициару к зачету требование, уступленное Гаранту Принципалом.</p>
+    <p class="text-indent">11. Гарантия может быть изменена Гарантом в следующем порядке: </p>
+    <p class="text-indent">- изменения, связанные с увеличением суммы и (или) срока действия Гарантии, исправлением ошибок в части несоответствия условиям, указанным в извещении об осуществлении закупки или документации о закупке или проекте Контракта, а также иные изменения, не ухудшающие положение Бенефициара, вступают в силу в дату выпуска Гарантом изменений в Гарантию согласие Бенефициара при этом не требуется;</p>
+    <p class="text-indent">- иные изменения в Гарантию вступают в силу в дату получения Гарантом согласия Бенефициара на соответствующее изменение Гарантии. </p>
+    <p class="text-indent">12. Любые изменения настоящей Гарантии, как требующие согласие Бенефициара, так и не требующие его согласия, производятся Гарантом в письменной форме и направляются Бенефициару в срок не позднее 5 (Пяти) рабочих дней с момента их внесения.</p>
+    <p class="text-indent">13. Гарантия является безотзывной, вступает в силу с даты выдачи Гарантии и действует по <#if bank.dateTo?has_content>${bank.dateTo?date("yyyy-MM-dd")?date} г. </#if> включительно.</p>
+    <p class="text-indent">14. Гарант передает сведения о Принципале, определенные ст. 4 Федерального закона от 30.12.2004 № 218-ФЗ «О кредитных историях», хотя бы в одно бюро кредитный историй, включенное в государственный реестр бюро кредитных историй, без получения согласий Принципала на их представление, в соответствии с требованиями ч. 3.1 и ч. 4 ст. 5 указанного Закона.</p>
+    <p class="text-indent">15. Настоящая Гарантия подчиняется законодательству Российской Федерации. Все споры, возникающие в связи с действительностью, толкованием или исполнением настоящей Гарантии, подлежат рассмотрению в Арбитражном суде в соответствии с действующим законодательством Российской Федерации.</p>
+    <p class="text-indent">16. Гарант соглашается, что Бенефициар имеет право на бесспорное списание денежных средств со счета Гаранта, при отсутствии оснований для отказа в удовлетворении требования бенефициара, предусмотренных Гражданским кодексом Российской Федерации, если Гарантом в срок не более чем 5 (Пять) рабочих дней не исполнено Требование по гарантии, направленное до окончания срока действия настоящей Гарантии. Условие, установленное настоящим пунктом, применяется, если в извещении об осуществлении закупки, документации о закупке, проекте Договора, заключаемого с Принципалом предусмотрено соответствующее право заказчика (Бенефициара) по Договору.</p>
+  
+    <p class="text-indent">15. Настоящая гарантия подчиняется законодательству Российской Федерации. Споры и разногласия, возникающие при исполнении настоящей Гарантии, разрешаются в Арбитражном суде в соответствии с действующим законодательством Российской Федерации.</p>
+    <div><br/></div>
+    <table style="margin-top:12px;width: 100%;">
+        <tbody>
+            <tr>
+                <td colspan="7" style="border: none">ГАРАНТ:</td>
+            </tr>
+            <tr>
+                <td style="width: 50%;border:none;vertical-align: bottom;"><#if bank.position?has_content>${bank.position}</#if></td>
+                <td style="border:none;width:2%;">&#160;</td>
+                <td style="border:none;color: #000000;width: 0.5%;vertical-align: bottom;"> /</td>
+                <td style="border-bottom: 1px solid #000;width: 10%;text-align: center;">&#160;</td>
+                <td style="border:none;color: #000000;width: 0.5%;vertical-align: bottom;"> /</td>
+                <td style="border:none;width:2%;">&#160;</td>
+                <td style="border-bottom: 1px solid #000;width: 35%;vertical-align: bottom;text-align: center;"><#if bank.signerFio?has_content>${bank.signerFio}</#if></td>
+            </tr>
+            <tr>
+                <td style="border:none;text-align: center;vertical-align: bottom;"></td>
+                <td style="border:none;">&#160;</td>
+                <td style="border:none;color: #a5a5a5;vertical-align: bottom;"> &#160;</td>
+                <td style="border-top: 1px solid #000;text-align: center;vertical-align: top;"><i>(подпись)</i> </td>
+                <td style="border:none;color: #a5a5a5;vertical-align: bottom;"> &#160;</td>
+                <td style="border:none;">&#160;</td>
+                <td style="border:none;vertical-align: bottom;text-align: center;"><i>Ф.И.О.</i></td>
+            </tr>
+            <tr>
+                <td colspan="7" style="border: none"><br/>М.П.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+</#if></#if></#if>
+
+<div class="footer"></div>
+</body>
+</html>
